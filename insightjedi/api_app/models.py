@@ -6,7 +6,7 @@ from django.contrib.postgres.fields import JSONField
 # Create your models here.
 
 class Document(models.Model):
-    SOURCE_CHOICES = []
+    SOURCE_CHOICES = ["online", "offline"]
 
     owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name="exports")
     created_time = models.DateTimeField(auto_created=True)
