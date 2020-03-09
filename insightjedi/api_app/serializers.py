@@ -5,7 +5,7 @@ from .models import Document
 
 
 class DocumentSerializer(serializers.ModelSerializer):
-    document_owner = serializers.PrimaryKeyRelatedField(source='owner', queryset=User.objects.all())
+    # document_owner = serializers.PrimaryKeyRelatedField(source='owner', queryset=User.objects.all())
 
     class Meta:
         model = Document
